@@ -6,6 +6,15 @@ jobs:
 
   run-tests:
     runs-on: ubuntu-latest
+    env:
+      SMTP_HOST: localhost
+      SMTP_LOGIN: toto
+      SMTP_PASSWORD: secr3t
+      CODEGOUVFR_ADMIN_EMAIL: toto@example.org
+      CODEGOUVFR_FROM: toto@example.org
+      CODEGOUVFR_PORT: 1337
+      CODEGOUVFR_GITHUB_USER: example
+      CODEGOUVFR_GITHUB_ACCESS_TOKEN: some-token
 
     steps:
       - name: Checkout
